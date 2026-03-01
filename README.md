@@ -13,3 +13,10 @@ Train and eval set - 50 and 50 professional curated questions and answers with q
 
 3. Achieved higher precision and recall on a legal QA set after a single PEFT epoch, while keeping training efficient and reproducible with W&B tracking.
 
+## Future steps and product roadmap
+
+1. Continue working with data engineer and privacy expert to expand the dataset for better training data and more robust evaluation
+    - Expand on the legal domain, now only US and UK, next steps - EU countries
+2. Test smaller and newer models and compare performance with the baseline
+3. Explore inference optimization (GGUF/Ollama, vllm, etc.) for safe and private local inference. At the moment is plain pytorch inference, inference optimization can benefit and speed up x4-x10 with GPU or other hardware like MPS. 
+    - Test Unslosth compatible `model.save_pretrained_mlx("./mlx-export")` Direct MPS export
